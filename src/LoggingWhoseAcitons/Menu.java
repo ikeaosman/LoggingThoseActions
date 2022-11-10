@@ -1,17 +1,20 @@
 package LoggingWhoseAcitons;
-
 import java.util.Scanner;
 
 public class Menu {
+    //Attributter-----------------------------------------------------------------
     private String menuHeader;
     private String leadText;
     private String[] menuItems;
 
+    //Konstruktør-----------------------------------------------------------------
     public Menu(String menuHeader, String leadText, String[] menuItems) {
         this.menuHeader = menuHeader;
         this.leadText = leadText;
         this.menuItems = menuItems;
     }
+
+    //Print menu-metode-----------------------------------------------------------------
     public void printMenu() {
         String printString = menuHeader + "\n";
         for (int i = 0; i < menuItems.length; i++)
@@ -19,7 +22,7 @@ public class Menu {
         System.out.println("\n" + printString);
     }
 
-
+    //Read choice-metode-----------------------------------------------------------------
     public int readChoice() {
         Scanner scanner = new Scanner(System.in);
         boolean validChoice = false;
@@ -31,6 +34,8 @@ public class Menu {
                 validChoice = true;
             } else {
                 scanner.nextLine();
-            }     }     return choice;
+            }
+        }     return choice;
+
     }
 }
